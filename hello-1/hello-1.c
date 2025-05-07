@@ -1,10 +1,12 @@
 /*
-* hello-1.c - Hello World
-*/
+ * hello-1.c - Hello World
+ */
+
 #include <linux/module.h> //needed by all modules
 #include <linux/printk.h> //pr_info()
+#include <linux/init.h> //defines macros __init and __exit
 
-int init_module(void)
+static int __init hello_init(void) //init_module is no longer supported
 {
     pr_info("Hello World 1.\n");
 
@@ -12,10 +14,16 @@ int init_module(void)
     return 0;
 }
 
-void cleanup_module(void)
+static void __exit hello_exit(void)
 {
     pr_info("Bye World 1.\n");
 }
 
-MODULE_LICENSE("GPL")
+module_init(hello_init)
+module_exit(hello_exit)
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Zihan Xu");
+MODULE_DESCRIPTION("Hello World Loadable Kernel Module(LKM)");
+
 

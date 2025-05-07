@@ -1,4 +1,4 @@
-obj-m += hello-1.c
+obj-m += hello-1.o #not hello-1.c file
 
 PWD := $(CURDIR)
 

@@ -1,1 +1,1 @@
-savedcmd_/home/zihan-xu/Desktop/kernelModule-Linux/hello-1/modules.order := {   echo /home/zihan-xu/Desktop/kernelModule-Linux/hello-1/hello-1.c; :; } > /home/zihan-xu/Desktop/kernelModule-Linux/hello-1/modules.order
+savedcmd_/home/zihan-xu/Desktop/kernelModule-Linux/hello-1/modules.order := {   echo /home/zihan-xu/Desktop/kernelModule-Linux/hello-1/hello-1.o; :; } > /home/zihan-xu/Desktop/kernelModule-Linux/hello-1/modules.order
