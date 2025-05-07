@@ -1,5 +1,28 @@
 /*
  * hello-3.c - Demonstrates command line argument passing to a module
+ * sudo insmod hello-3.ko mystring="bebop" myintarray=-1
+ * sudo dmesg -t | tail -7
+        myshort is a short integer: 1
+        myint is an integer: 420
+        mylong is a long integer: 9999
+        mystring is a string: bebop
+        myintarray[0] = -1
+        myintarray[1] = 420
+        got 1 arguments for myintarray.
+ * sudo rmmod hello-3
+ * sudo dmesg -t | tail -1
+ *      Bye World 3.
+ * sudo insmod hello-3.ko mystring+"supercalifragilisticexpialidocious" myintarray=-1,-1
+ * sudo dmesg -t | tail -7
+        myshort is a short integer: 1
+        myint is an integer: 420
+        mylong is a long integer: 9999
+        mystring is a string: blah
+        myintarray[0] = -1
+        myintarray[1] = -1
+        got 2 arguments for myintarray.
+ * sudo insmod hello-3.ko mylong=hello
+        insmod: ERROR: could not insert module hello3.ko: Invalid parameters
  */
 #include <linux/init.h> //defines macros __init and __exit
 #include <linux/kernel.h> //for ARRAY_SIZE()
