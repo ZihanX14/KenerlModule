@@ -2,6 +2,10 @@
 #obj-m += hello-2.o
 obj-m += hello-3.o
 
+#one module file from different c files
+# obj-m += startstop.o
+# startstop-objs := start.o stop.o
+
 PWD := $(CURDIR)
 
 all:

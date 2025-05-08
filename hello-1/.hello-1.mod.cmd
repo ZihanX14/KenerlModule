@@ -1,1 +1,0 @@
-savedcmd_/home/zihan-xu/Desktop/kernelModule-Linux/hello-1/hello-1.mod := printf '%s\n'   hello-1.o | awk '!x[$$0]++ { print("/home/zihan-xu/Desktop/kernelModule-Linux/hello-1/"$$0) }' > /home/zihan-xu/Desktop/kernelModule-Linux/hello-1/hello-1.mod
